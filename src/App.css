@@ -1,38 +1,120 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+body{
+    background-color: #191919;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.header-container {
+    position: relative;
   }
+  
+  .img-container {
+    position: relative;
+  }
+  
+  .header-img {
+    width: 100%; /* Tamanho da imagem ocupando toda a largura do contêiner */
+    height: auto; /* Altura ajustada automaticamente para manter a proporção da imagem */
+  }
+
+
+/* ajeitando menu */
+
+.header-container {
+  position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.img-container {
+  position: relative;
+}
+
+.header-img {
+  width: 100%;
+  height: auto;
+}
+
+.menu-overlay {
+  position: absolute;
+  top: -41%;
+  left: 87%;
+  width: 0%;
+  height: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center; 
+  color: #fff;
+  font-size: 34px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+/* ajustando texto */
+
+.img-container {
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.image-overlay {
+  position: absolute;
+  top: 58%; /* Posiciona o texto verticalmente no meio da imagem */
+  left: 28%; /* Posiciona o texto horizontalmente no meio da imagem */
+  transform: translate(-50%, -50%); /* Move o texto de volta em 50% de sua própria largura e altura */
+  padding: 20px;
+  max-width: 47%; /* Largura máxima do texto */
+
+}
+
+.image-text {
+  font-size: 22px;
+  color: #fff;
+}
+
+/* segundo texto */
+
+.image-overlay-second {
+  position: absolute;
+  top: 69%; 
+  left: 362px; 
+  transform: translate(-50%, -50%); 
+  padding: 20px;
+  max-width: 47%; 
+}
+
+.image-text-second {
+  font-size: 55px;
+  color: #fff;
+}
+
+/* botoes */
+
+.button-container {
+  position: absolute;
+  top: 115%;
+  left: 39%; 
+  transform: translateX(-50%); /* Mover para a esquerda metade da largura */
+  display: flex;
+  justify-content: center; 
+}
+
+.button {
+  margin: 0 10px; /* Espaçamento entre os botões */
+  padding: 15px 0; /* Manter o mesmo espaçamento interno */
+  width: 200px; /* Definir uma largura fixa para os botões */
+  font-size: 26px;
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none; /* Remover a borda quando o botão está focado */
+  display: flex; /* Garante que o texto dentro dos botões seja exibido na horizontal */
+  justify-content: center; /* Centraliza horizontalmente o texto dentro dos botões */
+  align-items: center;
+}
+
+.button:hover {
+  background-color: #fff;
+  color: #000;
 }
